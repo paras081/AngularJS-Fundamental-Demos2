@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>inline edit note app</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head> 
+	<body ng-app  ng-controller="InlineEditorController">
+
+		<div id="main" ng-click="hideToolTip()">
+				<div  class="tooltip" ng-click="$event.stopPropagation()" ng-show="showtooltip">
+					<input type="text" ng-model="value" />
+				</div>
+				<p  ng-click="toggleToolTip($event)">{{value}}</p>
+		</div>
+	
+		<script src="script.js"></script>
+	</body>
+
+</html>
