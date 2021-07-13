@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ng-init using json file and http request call - demo app</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+		<script type="text/javascript" src="ng-controller.js"></script>
+	</head> 
+
+	<body ng-app="myJsonHttpApp"> 
+		<div ng-init="getCountryData()"  ng-controller="listController" >
+			<ul>
+				<li ng-repeat="eachCountry in countries" >
+					{{eachCountry.name}}					
+				</li>
+			</ul>
+
+		</div>
+	</body>
+</html>

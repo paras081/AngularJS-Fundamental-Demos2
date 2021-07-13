@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>1st http demo app</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	</head> 
+
+	<body>
+		<div ng-app="myHttpApp" ng-controller="myHttpController">
+			<p>Welcome to Http request angular app</p>
+			<h1>{{myServerResponse}}</h1>
+		</div>
+
+		<script>
+			var app = angular.module('myHttpApp',[]);
+
+			app.controller('myHttpController',function($scope,$http) {
+
+
+				$http.get("server.html")
+					 .then(
+					 	function(response){
+					 		// console.log(response);
+					 		$scope.myServerResponse = response.data;
+
+				});
+
+
+			});
+		</script>
+	</body>
+</html>
