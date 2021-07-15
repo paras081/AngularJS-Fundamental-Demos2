@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular Fileter  |  currency</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	</head> 
+	<body ng-app="myFilterApp" ng-controller="filterController">
+			<div>
+				
+				<p>Prize is {{ prize | currency : " €" : 2 }}</p>
+				<p>Prize is {{ prize | currency }}</p>
+			</div>
+
+			<script type="text/javascript">
+				angular.module('myFilterApp',[])
+					   .controller('filterController',function($scope){
+					   		$scope.prize = 20;
+					   });
+			</script>
+	</body>
+
+<!-- 
+	Filter names
+	uppercase
+	lowecase
+	json
+	orderby
+	currency -->
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Angular Fileter  |  uppercase</title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+	</head> 
+	<body ng-app="myFilterApp" ng-controller="filterController">
+			<div>
+				<input type="text">
+				<p>My name is {{ name | uppercase }}{{ surname | lowercase }}</p>
+			</div>
+
+			<script type="text/javascript">
+				angular.module('myFilterApp',[])
+					   .controller('filterController',function($scope){
+					   		$scope.name = "Paras";
+					   		$scope.surname = "KALARIYA";
+					   });
+			</script>
+	</body>
+
+<!-- 
+	Filter names
+	uppercase
+	lowecase
+	json
+	orderby
+	currency -->
+</html>
